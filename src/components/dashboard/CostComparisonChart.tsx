@@ -92,7 +92,6 @@ const CostComparisonChart: React.FC<CostComparisonChartProps> = ({ data }) => {
             fill="#4a90e2" 
             radius={[4, 4, 0, 0]}
             animationDuration={1500}
-            animationDelay={100}
             animationEasing="ease-out"
           />
           <Bar 
@@ -102,7 +101,6 @@ const CostComparisonChart: React.FC<CostComparisonChartProps> = ({ data }) => {
             fill="#f5a623" 
             radius={[4, 4, 0, 0]}
             animationDuration={1500}
-            animationDelay={200}
             animationEasing="ease-out"
           />
           <Bar 
@@ -112,7 +110,6 @@ const CostComparisonChart: React.FC<CostComparisonChartProps> = ({ data }) => {
             fill="#7ed321" 
             radius={[4, 4, 0, 0]}
             animationDuration={1500}
-            animationDelay={300}
             animationEasing="ease-out"
           />
           <Bar 
@@ -122,7 +119,6 @@ const CostComparisonChart: React.FC<CostComparisonChartProps> = ({ data }) => {
             fill="#9013fe" 
             radius={[4, 4, 0, 0]}
             animationDuration={1500}
-            animationDelay={400}
             animationEasing="ease-out"
           />
         </BarChart>
