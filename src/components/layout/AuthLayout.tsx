@@ -10,12 +10,12 @@ interface AuthLayoutProps {
 
 const AuthLayout: React.FC<AuthLayoutProps> = ({ children, title, subtitle }) => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-blue-100 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-white to-secondary/30 p-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="glass-card max-w-md w-full rounded-2xl p-8 sm:p-10"
+        className="glass-card max-w-md w-full rounded-lg p-8 sm:p-10"
       >
         <motion.div
           initial={{ opacity: 0 }}
@@ -23,9 +23,9 @@ const AuthLayout: React.FC<AuthLayoutProps> = ({ children, title, subtitle }) =>
           transition={{ delay: 0.2, duration: 0.5 }}
           className="mb-8 text-center"
         >
-          <h1 className="text-3xl font-bold text-blue-gradient mb-2 font-montserrat">{title}</h1>
+          <h1 className="text-3xl font-bold text-gradient mb-2">{title}</h1>
           {subtitle && (
-            <p className="text-gray-600 font-montserrat">{subtitle}</p>
+            <p className="text-gray-600">{subtitle}</p>
           )}
         </motion.div>
         <motion.div

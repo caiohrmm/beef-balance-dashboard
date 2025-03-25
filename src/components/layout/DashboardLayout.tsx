@@ -14,7 +14,7 @@ import {
   LogOut, 
   ChevronRight 
 } from "lucide-react";
-import { ButtonCustom } from "../ui/button-custom";
+import { ButtonCustom } from "../button-custom";
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
@@ -47,11 +47,11 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children, title }) =>
             animate={{ x: 0 }}
             exit={{ x: -280 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed inset-y-0 left-0 z-40 w-64 bg-white border-r border-gray-200 shadow-sm h-full flex flex-col"
+            className="fixed inset-y-0 left-0 z-40 w-64 bg-white border-r border-gray-100 shadow-sm h-full flex flex-col"
           >
-            <div className="p-5 border-b border-gray-200">
+            <div className="p-5 border-b border-gray-100">
               <div className="flex items-center justify-between">
-                <h1 className="text-xl font-bold text-blue-gradient font-montserrat">CaioMartinsAgroPec</h1>
+                <h1 className="text-xl font-bold text-gradient">AgroPec</h1>
                 <button 
                   onClick={toggleSidebar} 
                   className="btn-icon lg:hidden"
@@ -60,36 +60,36 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children, title }) =>
                 </button>
               </div>
             </div>
-            <nav className="flex-grow p-5 space-y-2">
+            <nav className="flex-grow p-5 space-y-1">
               {navItems.map((item) => (
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`flex items-center px-4 py-2.5 rounded-lg transition-all group font-montserrat ${
+                  className={`flex items-center px-4 py-2.5 rounded-md transition-all group ${
                     location.pathname === item.path
-                      ? "bg-blue-100 text-blue-800"
-                      : "text-gray-600 hover:bg-blue-50 hover:text-blue-700"
+                      ? "bg-secondary text-primary-700"
+                      : "text-gray-600 hover:bg-gray-50 hover:text-primary-600"
                   }`}
                 >
                   <item.icon 
-                    size={20} 
+                    size={18} 
                     className={`mr-3 ${
                       location.pathname === item.path
-                        ? "text-blue-600"
-                        : "text-gray-500 group-hover:text-blue-600"
+                        ? "text-primary-600"
+                        : "text-gray-500 group-hover:text-primary-500"
                     }`}
                   />
                   <span>{item.name}</span>
                   {location.pathname === item.path && (
                     <motion.div
                       layoutId="activeNav"
-                      className="absolute left-0 w-1 h-8 bg-blue-600 rounded-r"
+                      className="absolute left-0 w-1 h-8 bg-primary rounded-r"
                     />
                   )}
                 </Link>
               ))}
             </nav>
-            <div className="p-5 border-t border-gray-200">
+            <div className="p-5 border-t border-gray-100">
               <ButtonCustom
                 variant="outline"
                 className="w-full justify-start"
@@ -106,7 +106,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children, title }) =>
       {/* Main content */}
       <div className={`flex-1 transition-all ${isSidebarOpen ? "lg:ml-64" : "ml-0"}`}>
         {/* Header */}
-        <header className="sticky top-0 z-30 bg-white/80 backdrop-blur-sm border-b border-gray-200 px-4 sm:px-6 py-4">
+        <header className="sticky top-0 z-30 bg-white/80 backdrop-blur-sm border-b border-gray-100 px-4 sm:px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <button 
@@ -115,7 +115,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children, title }) =>
               >
                 <Menu size={20} />
               </button>
-              <h1 className="text-xl font-semibold text-gray-800 font-montserrat">{title}</h1>
+              <h1 className="text-xl font-semibold text-gray-800">{title}</h1>
             </div>
             <div className="flex items-center gap-4">
               <ButtonCustom variant="default" size="sm">

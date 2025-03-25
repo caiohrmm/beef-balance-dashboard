@@ -27,7 +27,18 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					50: '#f0faf4',
+					100: '#dcf4e6',
+					200: '#bbe9d1',
+					300: '#89d7b0',
+					400: '#56be88',
+					500: '#35a46c',
+					600: '#248a57',
+					700: '#1e6f47',
+					800: '#1b593a',
+					900: '#184a32',
+					950: '#0d291d',
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -64,17 +75,17 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				agro: {
-					50: "#f5f9f7",
-					100: "#e0efe6",
-					200: "#c1dfd0",
-					300: "#92c5ab",
-					400: "#5fa480",
-					500: "#3c8862",
-					600: "#2c704e",
-					700: "#255a40",
-					800: "#214835",
-					900: "#1e3c2e",
-					950: "#0e201a",
+					50: "#f0faf4",
+					100: "#dcf4e6",
+					200: "#bbe9d1",
+					300: "#89d7b0",
+					400: "#56be88",
+					500: "#35a46c",
+					600: "#248a57",
+					700: "#1e6f47",
+					800: "#1b593a",
+					900: "#184a32",
+					950: "#0d291d",
 				},
 				blue: {
 					50: "#eaf5ff",
@@ -164,15 +175,20 @@ export default {
 				'pulse-subtle': 'pulse-subtle 2s ease-in-out infinite',
 				'number-change': 'number-change 0.5s ease-out'
 			},
-			fontFamily: {
-				sans: ['Inter var', 'Inter', 'sans-serif'],
-			},
 			boxShadow: {
+				'sm': '0 1px 2px 0 rgb(0 0 0 / 0.05)',
+				'DEFAULT': '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
+				'md': '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
+				'lg': '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
+				'xl': '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)',
+				'2xl': '0 25px 50px -12px rgb(0 0 0 / 0.25)',
+				'inner': 'inset 0 2px 4px 0 rgb(0 0 0 / 0.05)',
 				'glass': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.01)',
 				'glass-hover': '0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.01)',
 				'glass-active': '0 2px 3px -1px rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.01)',
 				'card': '0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px 0 rgba(0, 0, 0, 0.02)',
 				'card-hover': '0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+				'none': 'none'
 			}
 		}
 	},

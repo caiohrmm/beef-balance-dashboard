@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Calculator, DollarSign, Truck, Scale, Target, Calendar } from "lucide-react";
-import { ButtonCustom } from "../ui/button-custom";
+import { ButtonCustom } from "../button-custom";
 import { useToast } from "@/hooks/use-toast";
 
 const AddBatchForm: React.FC = () => {
@@ -96,7 +96,7 @@ const AddBatchForm: React.FC = () => {
             transition={{ delay: 0.1, duration: 0.5 }}
           >
             <label htmlFor="cattleCount" className="form-label flex items-center">
-              <Users size={16} className="mr-2 text-agro-600" />
+              <Users size={16} className="mr-2 text-primary-600" />
               Quantidade de Cabeças
             </label>
             <input
@@ -232,15 +232,15 @@ const AddBatchForm: React.FC = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="p-4 rounded-lg bg-agro-50 border border-agro-200"
+            className="p-4 rounded-md bg-secondary border border-primary-100"
           >
             <div className="flex items-center mb-2">
-              <Calculator size={18} className="text-agro-600 mr-2" />
-              <h3 className="text-lg font-medium text-agro-800">Cálculos Automáticos</h3>
+              <Calculator size={18} className="text-primary-600 mr-2" />
+              <h3 className="text-lg font-medium text-primary-800">Cálculos Automáticos</h3>
             </div>
             <p className="text-gray-700">
               <span className="font-medium">Valor inicial da @:</span>{" "}
-              <span className="text-agro-700 font-bold">
+              <span className="text-primary-700 font-bold">
                 {formatCurrency(initialArrobaValue)}
               </span>
             </p>

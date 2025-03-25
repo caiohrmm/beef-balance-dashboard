@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Wheat, TreePine, Wrench, Truck, Calculator } from "lucide-react";
-import { ButtonCustom } from "../ui/button-custom";
+import { ButtonCustom } from "../button-custom";
 import { useToast } from "@/hooks/use-toast";
 
 interface CostItem {
