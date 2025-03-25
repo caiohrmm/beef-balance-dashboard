@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Wheat, TreePine, Tool, Truck, Calculator } from "lucide-react";
+import { Wheat, TreePine, Wrench, Truck, Calculator } from "lucide-react";
 import { ButtonCustom } from "../ui/button-custom";
 import { useToast } from "@/hooks/use-toast";
 
@@ -108,7 +108,7 @@ const CostManagementForm: React.FC = () => {
       case "pasto":
         return <TreePine size={16} className="text-green-700" />;
       case "manutencao":
-        return <Tool size={16} className="text-blue-600" />;
+        return <Wrench size={16} className="text-blue-600" />;
       case "transporte":
         return <Truck size={16} className="text-purple-600" />;
       default:
