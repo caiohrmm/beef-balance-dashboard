@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 @tailwind base;
@@ -170,15 +171,15 @@
   }
   
   .form-label {
-    @apply text-sm font-medium text-gray-700 font-montserrat;
+    @apply text-sm font-medium text-gray-700 font-sans;
   }
   
   .form-input {
-    @apply px-4 py-2 rounded-lg border border-gray-200 focus:border-blue-400 focus:ring focus:ring-blue-300/40 focus:outline-none transition-all duration-200 font-montserrat;
+    @apply px-4 py-2 rounded-lg border border-gray-200 focus:border-blue-400 focus:ring focus:ring-blue-300/40 focus:outline-none transition-all duration-200 font-sans;
   }
   
   .form-select {
-    @apply px-4 py-2 rounded-lg border border-gray-200 focus:border-blue-400 focus:ring focus:ring-blue-300/40 focus:outline-none transition-all duration-200 font-montserrat;
+    @apply px-4 py-2 rounded-lg border border-gray-200 focus:border-blue-400 focus:ring focus:ring-blue-300/40 focus:outline-none transition-all duration-200 font-sans;
   }
   
   .form-checkbox {
