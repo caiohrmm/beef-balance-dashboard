@@ -51,7 +51,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children, title }) =>
           >
             <div className="p-5 border-b border-gray-200">
               <div className="flex items-center justify-between">
-                <h1 className="text-xl font-bold text-gradient">CaioMartinsAgroPec</h1>
+                <h1 className="text-xl font-bold text-blue-gradient font-montserrat">CaioMartinsAgroPec</h1>
                 <button 
                   onClick={toggleSidebar} 
                   className="btn-icon lg:hidden"
@@ -65,25 +65,25 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children, title }) =>
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`flex items-center px-4 py-2.5 rounded-lg transition-all group ${
+                  className={`flex items-center px-4 py-2.5 rounded-lg transition-all group font-montserrat ${
                     location.pathname === item.path
-                      ? "bg-agro-100 text-agro-800"
-                      : "text-gray-600 hover:bg-agro-50 hover:text-agro-700"
+                      ? "bg-blue-100 text-blue-800"
+                      : "text-gray-600 hover:bg-blue-50 hover:text-blue-700"
                   }`}
                 >
                   <item.icon 
                     size={20} 
                     className={`mr-3 ${
                       location.pathname === item.path
-                        ? "text-agro-600"
-                        : "text-gray-500 group-hover:text-agro-600"
+                        ? "text-blue-600"
+                        : "text-gray-500 group-hover:text-blue-600"
                     }`}
                   />
                   <span>{item.name}</span>
                   {location.pathname === item.path && (
                     <motion.div
                       layoutId="activeNav"
-                      className="absolute left-0 w-1 h-8 bg-agro-600 rounded-r"
+                      className="absolute left-0 w-1 h-8 bg-blue-600 rounded-r"
                     />
                   )}
                 </Link>
@@ -115,7 +115,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children, title }) =>
               >
                 <Menu size={20} />
               </button>
-              <h1 className="text-xl font-semibold text-gray-800">{title}</h1>
+              <h1 className="text-xl font-semibold text-gray-800 font-montserrat">{title}</h1>
             </div>
             <div className="flex items-center gap-4">
               <ButtonCustom variant="default" size="sm">

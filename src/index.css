@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -14,7 +15,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
 
-    --primary: 151 42% 38%;
+    --primary: 214 100% 50%;
     --primary-foreground: 355 100% 100%;
 
     --secondary: 210 40% 96%;
@@ -23,7 +24,7 @@
     --muted: 210 40% 96%;
     --muted-foreground: 215 16% 47%;
 
-    --accent: 142 72% 29%;
+    --accent: 214 100% 50%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84% 60%;
@@ -31,18 +32,18 @@
 
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 142 72% 29%;
+    --ring: 214 100% 50%;
 
     --radius: 0.75rem;
 
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 222 47% 11%;
-    --sidebar-primary: 151 42% 38%;
+    --sidebar-primary: 214 100% 50%;
     --sidebar-primary-foreground: 355 100% 100%;
     --sidebar-accent: 240 5% 96%;
     --sidebar-accent-foreground: 240 6% 10%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 142 72% 29%;
+    --sidebar-ring: 214 100% 50%;
   }
 
   .dark {
@@ -55,7 +56,7 @@
     --popover: 222 47% 11%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 151 42% 38%;
+    --primary: 214 100% 50%;
     --primary-foreground: 355 100% 100%;
 
     --secondary: 217 33% 17%;
@@ -64,7 +65,7 @@
     --muted: 217 33% 17%;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 142 72% 29%;
+    --accent: 214 100% 50%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 63% 31%;
@@ -72,7 +73,7 @@
 
     --border: 217 33% 17%;
     --input: 217 33% 17%;
-    --ring: 142 72% 29%;
+    --ring: 214 100% 50%;
   }
 
   * {
@@ -104,45 +105,49 @@
   }
   
   .input-glass {
-    @apply bg-white/50 backdrop-blur-sm border border-white/30 focus:border-primary/50 focus:ring-1 focus:ring-primary/30 rounded-lg px-4 py-2 transition-all duration-200;
+    @apply bg-white/50 backdrop-blur-sm border border-white/30 focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/30 rounded-lg px-4 py-2 transition-all duration-200;
   }
   
   .text-gradient {
     @apply bg-gradient-to-r from-agro-700 via-agro-600 to-agro-500 bg-clip-text text-transparent;
   }
+
+  .text-blue-gradient {
+    @apply bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 bg-clip-text text-transparent;
+  }
   
   .btn-primary {
-    @apply bg-gradient-to-r from-agro-600 to-agro-500 text-white font-medium rounded-lg px-5 py-2.5 
-           hover:from-agro-700 hover:to-agro-600 active:from-agro-800 active:to-agro-700 
-           focus:ring-2 focus:ring-agro-500/50 focus:outline-none
-           transition-all duration-200 shadow-sm hover:shadow-md transform hover:-translate-y-0.5;
+    @apply bg-gradient-to-r from-blue-600 to-blue-500 text-white font-medium rounded-lg px-5 py-2.5 
+           hover:from-blue-700 hover:to-blue-600 active:from-blue-800 active:to-blue-700 
+           focus:ring-2 focus:ring-blue-500/50 focus:outline-none
+           transition-all duration-200 shadow-sm hover:shadow-md transform hover:-translate-y-0.5 font-montserrat;
   }
   
   .btn-secondary {
-    @apply bg-white text-agro-700 border border-agro-200 font-medium rounded-lg px-5 py-2.5 
-           hover:bg-agro-50 active:bg-agro-100 
-           focus:ring-2 focus:ring-agro-500/30 focus:outline-none
-           transition-all duration-200 shadow-sm hover:shadow-md transform hover:-translate-y-0.5;
+    @apply bg-white text-blue-700 border border-blue-200 font-medium rounded-lg px-5 py-2.5 
+           hover:bg-blue-50 active:bg-blue-100 
+           focus:ring-2 focus:ring-blue-500/30 focus:outline-none
+           transition-all duration-200 shadow-sm hover:shadow-md transform hover:-translate-y-0.5 font-montserrat;
   }
   
   .btn-outline {
-    @apply border border-agro-200 text-agro-700 bg-transparent font-medium rounded-lg px-5 py-2.5 
-           hover:bg-agro-50 active:bg-agro-100 
-           focus:ring-2 focus:ring-agro-500/30 focus:outline-none
-           transition-all duration-200;
+    @apply border border-blue-200 text-blue-700 bg-transparent font-medium rounded-lg px-5 py-2.5 
+           hover:bg-blue-50 active:bg-blue-100 
+           focus:ring-2 focus:ring-blue-500/30 focus:outline-none
+           transition-all duration-200 font-montserrat;
   }
   
   .btn-ghost {
-    @apply text-agro-600 bg-transparent font-medium rounded-lg px-5 py-2.5 
-           hover:bg-agro-50 active:bg-agro-100 
-           focus:ring-2 focus:ring-agro-500/30 focus:outline-none
-           transition-all duration-200;
+    @apply text-blue-600 bg-transparent font-medium rounded-lg px-5 py-2.5 
+           hover:bg-blue-50 active:bg-blue-100 
+           focus:ring-2 focus:ring-blue-500/30 focus:outline-none
+           transition-all duration-200 font-montserrat;
   }
   
   .btn-icon {
-    @apply rounded-full p-2 text-agro-600 bg-transparent
-           hover:bg-agro-50 active:bg-agro-100 
-           focus:ring-2 focus:ring-agro-500/30 focus:outline-none
+    @apply rounded-full p-2 text-blue-600 bg-transparent
+           hover:bg-blue-50 active:bg-blue-100 
+           focus:ring-2 focus:ring-blue-500/30 focus:outline-none
            transition-all duration-200;
   }
   
@@ -152,7 +157,7 @@
   }
   
   .data-card-highlight {
-    @apply flex flex-col p-5 rounded-xl bg-gradient-to-br from-agro-50 to-agro-100 border border-agro-200 shadow-card 
+    @apply flex flex-col p-5 rounded-xl bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 shadow-card 
            hover:shadow-card-hover transition-all duration-300;
   }
   
@@ -165,23 +170,23 @@
   }
   
   .form-label {
-    @apply text-sm font-medium text-gray-700;
+    @apply text-sm font-medium text-gray-700 font-montserrat;
   }
   
   .form-input {
-    @apply px-4 py-2 rounded-lg border border-gray-200 focus:border-agro-400 focus:ring focus:ring-agro-300/40 focus:outline-none transition-all duration-200;
+    @apply px-4 py-2 rounded-lg border border-gray-200 focus:border-blue-400 focus:ring focus:ring-blue-300/40 focus:outline-none transition-all duration-200 font-montserrat;
   }
   
   .form-select {
-    @apply px-4 py-2 rounded-lg border border-gray-200 focus:border-agro-400 focus:ring focus:ring-agro-300/40 focus:outline-none transition-all duration-200;
+    @apply px-4 py-2 rounded-lg border border-gray-200 focus:border-blue-400 focus:ring focus:ring-blue-300/40 focus:outline-none transition-all duration-200 font-montserrat;
   }
   
   .form-checkbox {
-    @apply rounded border-gray-300 text-agro-600 focus:ring-agro-500/30;
+    @apply rounded border-gray-300 text-blue-600 focus:ring-blue-500/30;
   }
   
   .form-radio {
-    @apply border-gray-300 text-agro-600 focus:ring-agro-500/30;
+    @apply border-gray-300 text-blue-600 focus:ring-blue-500/30;
   }
   
   .page-container {
