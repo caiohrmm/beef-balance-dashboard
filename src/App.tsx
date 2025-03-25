@@ -13,6 +13,7 @@ import AddBatch from "./pages/AddBatch";
 import CostManagement from "./pages/CostManagement";
 import Reports from "./pages/Reports";
 import Settings from "./pages/Settings";
+import RationCalculator from "./pages/RationCalculator";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/cost-management" element={<CostManagement />} />
           <Route path="/reports" element={<Reports />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/ration-calculator" element={<RationCalculator />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

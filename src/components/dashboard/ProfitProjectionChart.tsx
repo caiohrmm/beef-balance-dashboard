@@ -12,7 +12,7 @@ import {
   Legend,
   ReferenceLine,
 } from "recharts";
-import { ButtonCustom } from "../ui/button-custom";
+import { ButtonCustom } from "../button-custom";
 
 interface ProfitProjectionChartProps {
   data: {
@@ -47,9 +47,9 @@ const ProfitProjectionChart: React.FC<ProfitProjectionChartProps> = ({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, delay: 0.2 }}
-      className="chart-container h-80"
+      className="bg-white rounded-lg shadow-sm p-4 h-80"
     >
-      <div className="flex justify-between items-center mb-4 p-4 pb-0">
+      <div className="flex justify-between items-center mb-4">
         <h3 className="text-lg font-medium text-gray-800">Projeção de Lucro</h3>
         <ButtonCustom 
           variant="outline" 
@@ -59,7 +59,7 @@ const ProfitProjectionChart: React.FC<ProfitProjectionChartProps> = ({
           {showBreakEven ? "Esconder" : "Mostrar"} Ponto de Equilíbrio
         </ButtonCustom>
       </div>
-      <ResponsiveContainer width="100%" height="100%" className="p-4">
+      <ResponsiveContainer width="100%" height="85%">
         <LineChart
           data={data}
           margin={{
@@ -108,7 +108,6 @@ const ProfitProjectionChart: React.FC<ProfitProjectionChartProps> = ({
             dot={false}
             activeDot={{ r: 8, fill: "#3c8862", stroke: "#fff", strokeWidth: 2 }}
             animationDuration={2000}
-            animationEasing="ease-out"
           />
         </LineChart>
       </ResponsiveContainer>

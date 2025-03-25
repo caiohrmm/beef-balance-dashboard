@@ -15,7 +15,7 @@ import {
 interface WeightEvolutionChartProps {
   data: {
     month: string;
-    realWeight: number;
+    realWeight: number | null;
     projectedWeight: number;
   }[];
 }
@@ -26,12 +26,16 @@ const WeightEvolutionChart: React.FC<WeightEvolutionChartProps> = ({ data }) => 
       return (
         <div className="bg-white p-3 border border-gray-200 shadow-md rounded-md">
           <p className="font-medium text-gray-800">{label}</p>
-          <p className="text-agro-600">
-            <span className="font-medium">Real:</span> {payload[0].value} kg
-          </p>
-          <p className="text-blue-500">
-            <span className="font-medium">Projetado:</span> {payload[1].value} kg
-          </p>
+          {payload.map((entry: any) => {
+            if (entry.value !== null) {
+              return (
+                <p key={entry.dataKey} style={{ color: entry.color }}>
+                  <span className="font-medium">{entry.name}:</span> {entry.value} kg
+                </p>
+              );
+            }
+            return null;
+          })}
         </div>
       );
     }
@@ -43,10 +47,10 @@ const WeightEvolutionChart: React.FC<WeightEvolutionChartProps> = ({ data }) => 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="chart-container h-80"
+      className="bg-white rounded-lg shadow-sm p-4 h-80"
     >
-      <h3 className="text-lg font-medium text-gray-800 mb-4 p-4 pb-0">Evolução do Peso</h3>
-      <ResponsiveContainer width="100%" height="100%" className="p-4">
+      <h3 className="text-lg font-medium text-gray-800 mb-4">Evolução do Peso</h3>
+      <ResponsiveContainer width="100%" height="85%">
         <LineChart
           data={data}
           margin={{
@@ -79,7 +83,7 @@ const WeightEvolutionChart: React.FC<WeightEvolutionChartProps> = ({ data }) => 
             dot={{ r: 4, strokeWidth: 2, fill: "white" }}
             activeDot={{ r: 6, stroke: "#2c704e", strokeWidth: 2 }}
             animationDuration={1500}
-            animationEasing="ease-out"
+            connectNulls={true}
           />
           <Line
             type="monotone"
@@ -90,7 +94,6 @@ const WeightEvolutionChart: React.FC<WeightEvolutionChartProps> = ({ data }) => 
             strokeDasharray="5 5"
             dot={{ r: 3 }}
             animationDuration={1500}
-            animationEasing="ease-out"
           />
         </LineChart>
       </ResponsiveContainer>

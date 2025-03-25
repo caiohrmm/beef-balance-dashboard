@@ -12,7 +12,8 @@ import {
   Menu, 
   X, 
   LogOut, 
-  ChevronRight 
+  ChevronRight,
+  Calculator 
 } from "lucide-react";
 import { ButtonCustom } from "../button-custom";
 
@@ -28,6 +29,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children, title }) =>
   const navItems = [
     { name: "Dashboard", path: "/dashboard", icon: Home },
     { name: "Adicionar Lote", path: "/add-batch", icon: Plus },
+    { name: "Calculador de Ração", path: "/ration-calculator", icon: Calculator },
     { name: "Custos", path: "/cost-management", icon: DollarSign },
     { name: "Relatórios", path: "/reports", icon: FileText },
     { name: "Configurações", path: "/settings", icon: Settings },

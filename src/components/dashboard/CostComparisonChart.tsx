@@ -50,10 +50,10 @@ const CostComparisonChart: React.FC<CostComparisonChartProps> = ({ data }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, delay: 0.1 }}
-      className="chart-container h-80"
+      className="bg-white rounded-lg shadow-sm p-4 h-80"
     >
-      <h3 className="text-lg font-medium text-gray-800 mb-4 p-4 pb-0">Comparação de Custos</h3>
-      <ResponsiveContainer width="100%" height="100%" className="p-4">
+      <h3 className="text-lg font-medium text-gray-800 mb-4">Comparação de Custos</h3>
+      <ResponsiveContainer width="100%" height="85%">
         <BarChart
           data={data}
           margin={{
@@ -72,7 +72,7 @@ const CostComparisonChart: React.FC<CostComparisonChartProps> = ({ data }) => {
           <YAxis 
             tickLine={false}
             axisLine={{ stroke: "#e0e0e0" }}
-            tickFormatter={(value) => `R$ ${value}`}
+            tickFormatter={(value) => `R$ ${value/1000}k`}
           />
           <Tooltip content={<CustomTooltip />} />
           <Legend verticalAlign="top" height={36} />
